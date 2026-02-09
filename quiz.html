@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPA Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Knowledge Check Quiz</h1>
+  </header>
+
+  <main class="page">
+    <section class="card" aria-live="polite">
+      <!-- START SCREEN -->
+      <section id="start-screen">
+        <h2>Welcome!</h2>
+        <p>Test your knowledge. Click start when you’re ready.</p>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </section>
+
+      <!-- QUIZ SCREEN -->
+      <section id="quiz-screen" class="hidden">
+        <div class="quiz-top">
+          <p id="progress-text" class="muted">Question 1 of 5</p>
+          <p id="score-text" class="muted">Score: 0</p>
+        </div>
+
+        <article>
+          <h2 id="question-text" class="question">Question goes here</h2>
+          <div id="answers" class="answers" role="group" aria-label="Answer choices">
+            <!-- Answers render here -->
+          </div>
+        </article>
+
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+      </section>
+
+      <!-- RESULT SCREEN -->
+      <section id="result-screen" class="hidden">
+        <h2>Results</h2>
+        <p id="final-score" class="final-score">You got 0 out of 0 correct!</p>
+        <button id="restart-btn" class="btn">Restart</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
